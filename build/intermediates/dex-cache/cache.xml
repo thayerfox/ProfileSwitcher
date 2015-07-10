@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Android\AndroidStudioProjects\ProfileSwitcher\org.cyanogenmod.platform.sdk\org.cyanogenmod.platform.sdk.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d944f1586666cec9f402edabb55ce6623142bb40">
+        <dex dex="C:\Android\AndroidStudioProjects\ProfileSwitcher\app\build\intermediates\pre-dexed\debug\org.cyanogenmod.platform.sdk-82ef499f8f721f44980b64a8e8b3c58f757efa1d.jar" />
+    </item>
+
+</items>

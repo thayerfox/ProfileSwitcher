@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.cyanogenmod.platform.sdk.org.cyanogenmod.platform.sdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/org.cyanogenmod.platform.sdk/org.cyanogenmod.platform.sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
