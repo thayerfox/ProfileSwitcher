@@ -39,11 +39,13 @@ import android.widget.TextView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import ca.foxed.profileswitcher.R;
 
 
-public class ProfileSwitcherActivity extends Activity  {
+
+public class ProfileSwitcherActivity extends Activity   {
 
 
 	private static final String TAG = "ProfileSwitcherActivity";
@@ -75,9 +77,18 @@ public class ProfileSwitcherActivity extends Activity  {
 		nextScheduledChangeView = (TextView) findViewById(R.id.nextScheduledChange);
 		timedProfileView = (TextView) findViewById(R.id.timedProfile);
 
-		showAllSchedules();		
-	}
+		findViewById(R.id.plus_icon).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//Toast.makeText(ProfileSwitcherActivity.this, "Clicked pink Floating Action Button", Toast.LENGTH_SHORT).show();
+				Intent i = new Intent(getApplicationContext(), ScheduleActivity.class);
+				startActivity(i);
+			}
+		});
 
+         showAllSchedules();
+
+	}
 
 	/** Called when the activity is first created. */
 
@@ -295,17 +306,17 @@ public class ProfileSwitcherActivity extends Activity  {
 
 
 		scheduleList.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> adapter, View view,
-					int position, long id) {
-				Log.v(TAG,"in onItemClick");
-				Schedule schedule = (Schedule) adapter.getItemAtPosition(position);
-				//						 Object info = adapter.getItemAtPosition(position);
-				Intent i = new Intent(getApplicationContext(), ScheduleActivity.class);
-				i.putExtra(ScheduleActivity.EXTRAS_SCHEDULE_ID, schedule.getId());
-				startActivity(i);
+            public void onItemClick(AdapterView<?> adapter, View view,
+                                    int position, long id) {
+                Log.v(TAG, "in onItemClick");
+                Schedule schedule = (Schedule) adapter.getItemAtPosition(position);
+                //						 Object info = adapter.getItemAtPosition(position);
+                Intent i = new Intent(getApplicationContext(), ScheduleActivity.class);
+                i.putExtra(ScheduleActivity.EXTRAS_SCHEDULE_ID, schedule.getId());
+                startActivity(i);
 
-			}
-		});
+            }
+        });
 
 	}
 
